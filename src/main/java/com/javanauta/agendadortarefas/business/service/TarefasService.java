@@ -4,7 +4,7 @@ import com.javanauta.agendadortarefas.business.dto.TarefasDTO;
 import com.javanauta.agendadortarefas.business.mapper.TarefaUpdateConverter;
 import com.javanauta.agendadortarefas.business.mapper.TarefasConverter;
 import com.javanauta.agendadortarefas.infrastructure.entity.TarefasEntity;
-import com.javanauta.agendadortarefas.infrastructure.enums.StatusNotificacaoEnum;
+import com.javanauta.agendadortarefas.business.enums.StatusNotificacaoEnum;
 import com.javanauta.agendadortarefas.infrastructure.exceptions.ResourceNotFundException;
 import com.javanauta.agendadortarefas.infrastructure.repository.TarefasRepository;
 import com.javanauta.agendadortarefas.infrastructure.security.JwtUtil;
@@ -38,7 +38,8 @@ public class TarefasService {
     public List<TarefasDTO> buscarTarefasAgendadasPorPeriodo(LocalDateTime dataInicial, LocalDateTime dataFinal) {
 
         return tarefasConverter.paraListTarefasDTO(
-                tarefasRepository.findByDataEventoBetween(dataInicial, dataFinal));
+                tarefasRepository.findByDataEventoBetweenAndStatusNotificacaoEnum(dataInicial, dataFinal,
+                        StatusNotificacaoEnum.PENDENTE));
 
     }
 

@@ -1,7 +1,7 @@
 package com.javanauta.agendadortarefas.business.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.javanauta.agendadortarefas.infrastructure.enums.StatusNotificacaoEnum;
+import com.javanauta.agendadortarefas.business.enums.StatusNotificacaoEnum;
 import lombok.*;
 import org.springframework.data.annotation.Id;
 
@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
 @Builder
 public class TarefasDTO {
 
-    @Id
+
     private String id;
     private String nomeTarefa;
     private String descricao;
