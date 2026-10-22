@@ -1,4 +1,4 @@
-package com.javanauta.agendadortarefas.infrastructure.enums;
+package com.javanauta.agendadortarefas.business.enums;
 
 public enum StatusNotificacaoEnum {
 

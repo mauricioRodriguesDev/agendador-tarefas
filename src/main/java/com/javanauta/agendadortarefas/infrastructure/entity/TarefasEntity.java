@@ -1,7 +1,7 @@
 package com.javanauta.agendadortarefas.infrastructure.entity;
 
 
-import com.javanauta.agendadortarefas.infrastructure.enums.StatusNotificacaoEnum;
+import com.javanauta.agendadortarefas.business.enums.StatusNotificacaoEnum;
 import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -25,7 +25,6 @@ public class TarefasEntity {
     private String emailUsuario;
     private LocalDateTime dataEvento;
     private LocalDateTime dataAlteracao;
-    private String Status;
     private StatusNotificacaoEnum statusNotificacaoEnum;
 
 
