@@ -2,7 +2,7 @@ package com.javanauta.agendadortarefas.controller;
 
 import com.javanauta.agendadortarefas.business.dto.TarefasDTO;
 import com.javanauta.agendadortarefas.business.service.TarefasService;
-import com.javanauta.agendadortarefas.infrastructure.enums.StatusNotificacaoEnum;
+import com.javanauta.agendadortarefas.business.enums.StatusNotificacaoEnum;
 import lombok.RequiredArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.ResponseEntity;
